@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641988423745",
+    "project_id": "devfloody-riverpod-paginate",
+    "storage_bucket": "devfloody-riverpod-paginate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641988423745:android:a602dfd18ad441000216c0",
+        "android_client_info": {
+          "package_name": "com.golektruk.riverpod_infinite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641988423745-6beojma4dlmp3er3uhd5u78rsh59jjdc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPbiVdE9KNAdyEwrS134nV5lev3WkZj78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641988423745-6beojma4dlmp3er3uhd5u78rsh59jjdc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
