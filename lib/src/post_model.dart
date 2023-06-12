@@ -1,15 +1,16 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class Post {
-  String title;
-  String body;
-  String author;
-  int rating;
+part 'post_model.freezed.dart';
+part 'post_model.g.dart';
 
-  Post({
-    required this.title,
-    required this.body,
-    required this.author,
-    required this.rating,
-  });
+@freezed
+class Post with _$Post {
+  const factory Post({
+    @JsonKey(name: 'sr') required String title,
+    @JsonKey(name: 'en') required String body,
+    required String author,
+    required int rating,
+  }) = _Post;
+
+  factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 }
