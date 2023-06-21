@@ -4,7 +4,7 @@ class Post {
   String title;
   String body;
   String author;
-  int rating;
+  double rating;
 
   Post({
     required this.title,
@@ -12,4 +12,9 @@ class Post {
     required this.author,
     required this.rating,
   });
+
+  @override
+  String toString() {
+    return 'Post(title: $title, body: $body, author: $author, rating: $rating)';
+  }
 }

@@ -4,8 +4,6 @@ import 'package:dio/dio.dart';
 import 'package:riverpod_infinite/src/post_model.dart';
 
 abstract class PostRepository {
-  Future<void> createpost();
-
   Future<List<Post>> fetchItems({int? page, int? size});
 }
 
@@ -15,12 +13,6 @@ class PostRepositoryImpl extends PostRepository {
   PostRepositoryImpl({
     required this.dio,
   });
-
-  @override
-  Future<void> createpost() async {
-    // TODO: implement createpost
-    throw UnimplementedError();
-  }
 
   @override
   Future<List<Post>> fetchItems({int? page, int? size}) async {
@@ -40,7 +32,7 @@ class PostRepositoryImpl extends PostRepository {
                 title: data['sr'],
                 body: data['en'],
                 author: data['author'],
-                rating: data['rating'],
+                rating: double.parse((data['rating']).toString()),
               ),
             )
             .toList();
