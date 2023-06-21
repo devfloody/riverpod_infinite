@@ -6,9 +6,11 @@ import 'package:riverpod_infinite/src/post_repository.dart';
 import 'package:riverpod_infinite_scroll/riverpod_infinite_scroll.dart';
 
 final dioProvider = Provider<Dio>((ref) {
-  return Dio(BaseOptions(
-    baseUrl: "https://quote-api.dicoding.dev/",
-  ));
+  return Dio(
+    BaseOptions(
+      baseUrl: "https://quote-api.dicoding.dev/",
+    ),
+  );
 });
 
 final postRepositoryProvider = Provider<PostRepository>((ref) {
