@@ -12,4 +12,11 @@ class PostNotifierWithPagination extends PagedNotifier<int, Post> {
           },
           nextPageKeyBuilder: NextPageKeyBuilderDefault.mysqlPagination,
         );
+
+  void updatePostAuthor(String author) {
+    state = state.copyWith(records: [
+      for (var currentPost in state.records!)
+        if (currentPost.author == author) currentPost.copyWith(author: 'Ling') else currentPost,
+    ]);
+  }
 }
